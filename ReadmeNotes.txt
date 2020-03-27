@@ -75,55 +75,9 @@ https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core-sc
 //example scaffolding
 Scaffold-DbContext "server=localhost;port=3306;user=root;password=mypass;database=sakila" MySql.Data.EntityFrameworkCore -OutputDir sakila -f
 
-For this method/action/route:  https://localhost:44375/api/login
-The Get method is currently returning the following, which is not the correct shape: 
-[
-    [
-        "107982548316831794905",
-        "1937419",
-        "1A",
-        "1B"
-    ],
-    [
-        "Brandon",
-        "Brayden",
-        "Courtney",
-        "Courtney"
-    ],
-    [
-        "Roberts",
-        "Roberts",
-        "Tull",
-        "Tull"
-    ],
-    [
-        "brandon.roberts@ruralsourcing.com",
-        "brayden.robbins@ruralsourcing.com",
-        "courtney.tull@ruralsourcing.com",
-        "courtney.tull@ruralsourcing.com"
-    ],
-    [
-        "https://lh3.googleusercontent.com/a-/AAuE7mBr5bTYig1ynTCsuoVl_DIQg9i3JuNRsXk1_l4_=s96-c",
-        "",
-        "",
-        ""
-    ],
-    [
-        "",
-        "",
-        "",
-        ""
-    ],
-    [
-        "",
-        "",
-        "",
-        ""
-    ],
-    [
-        "",
-        "",
-        "",
-        ""
-    ]
-]
+For this controller route:  https://localhost:44375/api/login
+
+There are 3 action verbs:  
+Post (expcects json user object in body) writes to user table and returns email string 
+Get (returns all users as json) returns json with all users in user table.
+Delete (expects json [From Body] _ returns confirmation or error message.
